@@ -6,7 +6,7 @@ public class Main {
 
         Human human = new Human();
         human.pet.setWeight(500d);
-        human.pet.getWeight();
+        System.out.println(human.pet.getWeight());
         human.pet.takeForAWalk();
         human.pet.takeForAWalk();
         human.pet.takeForAWalk();
@@ -14,5 +14,6 @@ public class Main {
         human.pet.feed();
         human.pet.feed();
         human.pet.getWeight();
+        System.out.println(human.pet.getWeight());
     }
 }
