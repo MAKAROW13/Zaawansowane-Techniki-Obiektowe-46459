@@ -19,5 +19,11 @@ public class Main {
         Car car = new Car("marka", "producer");
         human.car = car;
         System.out.println(human.car.Marka + ' ' + human.car.Producer);
+
+        System.out.println();
+
+        human.getSalary();
+
+        System.out.println();
     }
 }
