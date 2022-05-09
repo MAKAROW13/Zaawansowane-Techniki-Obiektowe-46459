@@ -1,20 +1,24 @@
 package com.company;
 
+import creatures.Animal;
+import creatures.Pet;
 import devices.Car;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-interface Sellable{
-    boolean Sell(Human seller, Human buyer, Double price);
-}
-
 public class Human {
+
+    public Animal pet;
     private Car car;
     protected Double salary;
 
     protected Double valueOfTheCar;
     public int cash;
     public String name;
+
+    public Animal getPet() {
+        return pet;
+    }
 
     public Car getCar() {
         return car;
@@ -63,5 +67,4 @@ public class Human {
             this.salary = salary;
         }
 
-        Animal pet = new Animal();
 }

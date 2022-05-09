@@ -14,10 +14,10 @@ public abstract class Animal implements Feedable {
 
     public Animal() {
     }
+
     public void setWeight(Double weight) {
         this.weight = weight;
     }
-
     public Double getWeight() {
         return weight;
     }
@@ -35,21 +35,21 @@ public abstract class Animal implements Feedable {
         else
             System.out.println(this.species + " nie żyje!");
     }
-
     public Sellable sellable = new Sellable() {
         @Override
         public boolean Sell(Human seller, Human buyer, Double price) {
             buyer.setSalary(5000d);
-            if (buyer.pet.species != seller.pet.species) {
+            if(buyer.pet.species != seller.pet.species)
+            {
                 System.out.println("Sprzedający niestety nie ma tego zwierzęcia!");
                 return false;
             }
-            if (price > buyer.getSalary())
+            if(price > buyer.getSalary())
             {
                 System.out.println("Sprzedającego nie stać na to zwierzę!");
                 return false;
             }
-            if (buyer.pet.species == "Człowiek" || seller.pet.species == "Człowiek" || buyer.pet.species == "Human" || seller.pet.species == "Human")
+            if(buyer.pet.species == "Człowiek" || seller.pet.species == "Człowiek" || buyer.pet.species == "Human" || seller.pet.species == "Human")
                 System.out.println("Nie można handlować ludźmi!");
 
             buyer.setSalary(buyer.getSalary() - price);
