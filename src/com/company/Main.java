@@ -17,8 +17,8 @@ public class Main {
         System.out.println(human.pet.getWeight());
 
         Car car = new Car("marka", "producer");
-        human.car = car;
-        System.out.println(human.car.Marka + ' ' + human.car.Producer);
+        human.setCar(car);
+        System.out.println(human.getCar().Marka + ' ' + human.getCar().Producer);
 
         System.out.println();
 
@@ -28,5 +28,10 @@ public class Main {
 
         human.setSalary(3500d);
         System.out.println("Wypłata wynosi teraz... " + human.getSalary());
+
+        System.out.println();
+
+        human.setValueOfTheCar(5000d);
+        human.getValueOfTheCar();
     }
 }
