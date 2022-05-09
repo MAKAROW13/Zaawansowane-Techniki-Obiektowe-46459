@@ -15,5 +15,9 @@ public class Main {
         human.pet.feed();
         human.pet.getWeight();
         System.out.println(human.pet.getWeight());
+
+        Car car = new Car("marka", "producer");
+        human.car = car;
+        System.out.println(human.car.Marka + ' ' + human.car.Producer);
     }
 }
