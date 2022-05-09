@@ -25,5 +25,8 @@ public class Main {
         human.getSalary();
 
         System.out.println();
+
+        human.setSalary(3500d);
+        System.out.println("Wypłata wynosi teraz... " + human.getSalary());
     }
 }
