@@ -30,7 +30,13 @@ public class Main {
         human.pet.getWeight();
         System.out.println(human.pet.getWeight());
 
-        Car car = new Car("marka", "producer");
+        Car car = new Car("marka", "producer") {
+            @Override
+            public void refuel() {
+                System.out.println("Paliwko ++");
+            }
+        };
+
         human.setCar(car);
         System.out.println(human.getCar().Marka + ' ' + human.getCar());
 
@@ -49,8 +55,18 @@ public class Main {
         human.getValueOfTheCar();
 
         System.out.println();
-        Car newCar = new Car("markaNowa", "producerNowy");
-        Car newerCar = new Car("markaNowa", "producerNowy");
+        Car newCar = new Car("markaNowa", "producerNowy") {
+            @Override
+            protected void refuel() {
+                System.out.println("Paliwko ++");
+            }
+        };
+        Car newerCar = new Car("markaNowa", "producerNowy") {
+            @Override
+            protected void refuel() {
+                System.out.println("Paliwko ++");
+            }
+        };
 
         if(newCar == newerCar)
             System.out.println("To te same auta :O");
