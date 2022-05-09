@@ -1,6 +1,6 @@
 package devices;
 
-public class Car {
+public class Car extends Device {
 
     protected String Model;
     public final String Marka;
@@ -26,5 +26,10 @@ public class Car {
                 ", Color='" + Color + '\'' +
                 ", Value=" + Value +
                 '}';
+    }
+
+    @Override
+    public void turnOn() {
+        System.out.println("Auto ma opcję włącz");
     }
 }
