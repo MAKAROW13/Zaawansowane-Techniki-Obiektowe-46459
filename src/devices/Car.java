@@ -1,6 +1,6 @@
 package devices;
 
-public abstract Car extends Device {
+public abstract class Car extends Device {
 
     protected String Model;
     public final String Marka;
