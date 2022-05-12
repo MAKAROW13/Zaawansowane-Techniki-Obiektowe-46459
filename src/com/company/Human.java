@@ -59,7 +59,7 @@ public class Human {
         }
         else if (valueOfTheCar / 12 < this.salary) {
             System.out.println("Udało się kupić auto na kredyt!");
-            car[0] = new LPG("Skoda", "Fabia");
+            car[0] = new LPG("BMW", "YX");
             car[0].marka = "Ferrari";
             car[0].value = valueOfTheCar;
         }
