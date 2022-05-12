@@ -1,15 +1,17 @@
 package devices;
 
 import java.util.Date;
+import com.company.Human;
+import com.company.Sellable;
 
-public abstract class Device {
+public abstract class Device implements Sellable{
 
     public String model;
     public String marka;
     final String producer;
     public Date date;
 
-    protected Device() {
+    protected Device(String name, String make, double value, double money) {
         this.producer= "Producent";
     }
 
@@ -24,4 +26,9 @@ public abstract class Device {
     }
 
     public abstract void turnOn();
+
+    @Override
+    public boolean sell(Human seller, Human buyer, Double price) {
+        return true;
+    }
 }

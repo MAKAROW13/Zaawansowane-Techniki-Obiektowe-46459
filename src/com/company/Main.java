@@ -1,10 +1,17 @@
 package com.company;
 
 import creatures.Animal;
-
-import devices.*;
+import devices.Car;
+import devices.Diesel;
+import devices.LPG;
+import devices.Phone;
+import devices.Electric;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
-
+import java.util.Collections;
+import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
@@ -286,6 +293,21 @@ public class Main {
         System.out.println("Czy miał właścicieli? " + carForTask12.checkForOwners());
         System.out.println("Czy A sprzedał dla B? " + carForTask12.checkIfASoldB(human, human));
         System.out.println("Ilu miał właścicieli? " + carForTask12.getNumberOfSells());
+        System.out.println();
+        Phone phone1 = new Phone();
+        int money = 90;
+        phone1.installAnApp(money, 1.2, "JavaTutorial", 50);
+        phone1.installAnApp(money, 1.23, "JavaTutorial 5", 5);
+        phone1.installAnApp(money, 1.24, "JavaTutorial 4", 0);
+        phone1.installAnApp(money, 1.25, "JavaTutorial 3", 0);
+        phone1.installAnApp(money, 1.26, "JavaTutorial 2", 550);
+
+        phone1.isAppInstalled("JavaTutorial2");
+        phone1.isAppInstalled(new Application());
+        phone1.getAllAppsValue();
+        phone1.getAllFreeApps();
+        phone1.getAllAppsInAlphabeticOrder();
+        phone1.getAllAppsPricesInAscOrder();
     }
 }
 // coś tutaj się wali
